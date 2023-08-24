@@ -1,0 +1,80 @@
+<div class="container " *ngIf="favouriteClick == false">
+  <!-- Welcome message in add tasks -->
+  <div class="add-container">
+    <div class="message" style="margin-top: -30px;">
+      <h1>Welcome to Your To-Do List!</h1>
+      <p>Add your tasks below and mark them as completed using the checkmark icon or favorite them using the star icon.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="row" style="justify-content: center;
+      display: flex;">
+        <div class="col-md-8">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" #newItem placeholder="Enter something to start..."
+              aria-label="Text input" aria-describedby="basic-addon2">
+            <button class="btn btn-dark" type="button" id="basic-addon2" (click)="addItem(newItem.value)">Add
+              Item</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <!-- Message in add tasks when list is empty -->
+<div class="card-container padding_container box_styles" *ngIf="favouriteClick == false">
+  <div *ngIf="todoItemsList.length==0">
+    <h1>Welcome! 🌟</h1>
+    <p class="welcomestyles">Start building your path to success by adding your first to-do.</p>
+    <h5>Small steps today lead to big accomplishments tomorrow!</h5>
+  </div>
+  <div class="card" *ngFor="let item of todoItemsList;let i=index">
+
+    <h3>Task {{i+1}}</h3>
+    <p>{{item.item}}</p>
+    <img src="assets/bin.png" class="btn delete-icon" type="button" (click)="deleteItem(item)">
+    <div class="form-check checkbox-icon">
+      <input class="form-check-input coursor" type="checkbox" value="" id="checkbox1" (click)="completeItem(item)">
+    </div>
+
+    <img src="assets/favourite.png" class="btn favourite-icon" *ngIf="!item.isItemFavourite" type="button"
+      (click)="favItem(item)">
+    <img src="assets/star.png" class="btn text-danger" *ngIf="item.isItemFavourite" type="button"
+      (click)="favItem(item)">
+  </div>
+</div>
+<!--Welcome Message in favourite tasks -->
+<div class="container " *ngIf="favouriteClick == true && favouriteItemsList.length>0">
+  <div class="add-container">
+    <div class="fav_text">
+      <div>Take a glance at your list of favorites.</div>
+      <p>You have the flexibility to unfavorite and refavorite at any time.</p>
+    </div>
+  </div>
+</div>
+<!-- Message in favourite tasks when list is empty -->
+<div class="card-container padding_container_fav" *ngIf="favouriteClick == true">
+  <div *ngIf="favouriteItemsList.length==0">
+    <p class="chat-bubble">Add something to your favorites list and turn this empty page into a canvas of joy.</p>
+  </div>
+  <div class="card" *ngFor="let item of favouriteItemsList;let i=index">
+    <p>{{item.item}}</p>
+    <img src="assets/star.png" class="btn text-danger" type="button" (click)="favItemList(item)">
+  </div>
+</div>
+
+<!-- Complete tasks -->
+<div *ngIf="isCompletedClick" class="padding_container completed_styles">
+  <p class="welcomestyles">Find the completed items here, and you can also uncheck them again if needed.</p>
+  <div class="card-container ">
+    <div class="card" *ngFor="let item of completedItemsList;let i=index">
+      <p style="padding: 10px;margin: 0px;">{{item.item}}</p>
+      <div class="form-check checkbox-icon">
+        <input class="form-check-input coursor" type="checkbox" value="" id="favoriteCheckbox"
+          (click)="completeItem(item)" [checked]="item.isItemCompleted">
+      </div>
+    </div>
+  </div>
+</div>

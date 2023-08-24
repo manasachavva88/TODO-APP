@@ -1,0 +1,39 @@
+.todoItems{
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+.todocontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.custom-navbar {
+    background-color: #034075 !important;
+  }
+  .custom-navbar .navbar-brand {
+    color: #f73008;
+    font-weight: bold;
+  }
+
+
+  /* .custom-navbar .navbar-brand {
+    color: #fff;
+  }
+  #f73008.navbar-nav .nav-link.active
+  .custom-navbar .nav-link {
+    color: #fff;
+  }*/
+
+  .custom-navbar .nav-link {
+    color: #da10f4;
+    font-weight: 400;
+    font-size: 18px;
+  } 
+  .custom-navbar .nav-link:hover {
+    color: #0ffbf1;
+  } 
+  .custom-navbar .nav-link.active {
+    color: #0ffbf1;
+  } 

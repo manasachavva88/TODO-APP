@@ -1,0 +1,202 @@
+.input-container {
+  display: flex;
+  align-items: center;
+}
+.padding_container {
+  padding-left: 60px;
+  margin-top: 30px;
+}
+.padding_container_fav {
+  padding-left: 30px;
+  margin-top: 30px;
+}
+.add-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 50px;
+  align-items: center;
+}
+.btn_style {
+  border-radius: 0 5px 5px 0;
+}
+.input_style {
+  border-radius: 5px 0 0 5px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.card p {
+  color: #777;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+.card-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 20px; /* Add spacing between cards */
+  flex-wrap: wrap; /* Allow cards to wrap */
+}
+.card {
+  flex: 0 0 200px; /* Set a fixed width for the card */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  transition: transform 0.4s; /* Add a transition for the pop effect */
+  overflow: hidden;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #e74c3c;
+  font-size: 20px;
+  visibility: hidden; /* Hide the icon by default */
+  transition: opacity 0.3s; /* Add a transition for icon visibility */
+  width: 43px;
+}
+.favourite-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #e74c3c;
+  font-size: 20px;
+  visibility: hidden; /* Hide the icon by default */
+  transition: opacity 0.3s; /* Add a transition for icon visibility */
+  width: 43px;
+}
+.checkbox-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #e74c3c;
+  font-size: 20px;
+  visibility: hidden; /* Hide the icon by default */
+  transition: opacity 0.3s; /* Add a transition for icon visibility */
+  width: 43px;
+  cursor: pointer;
+}
+.checkbox-icon_fix {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #e74c3c;
+  font-size: 20px;
+  visibility: visible; /* Hide the icon by default */
+  transition: opacity 0.3s; /* Add a transition for icon visibility */
+  width: 43px;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-10px); /* Pop-up effect on hover */
+  outline: 1px solid #3498db;
+}
+
+.card:hover .delete-icon {
+  visibility: visible; /* Show the icon on hover */
+  opacity: 1; /* Fade in the icon on hover */
+}
+.card:hover .favourite-icon {
+  visibility: visible; /* Show the icon on hover */
+  opacity: 1; /* Fade in the icon on hover */
+}
+
+.card:hover .checkbox-icon {
+  visibility: visible; /* Show the icon on hover */
+  opacity: 1; /* Fade in the icon on hover */
+}
+
+.card-content {
+  transition: opacity 0.3s; /* Add a transition for content visibility */
+  opacity: 1; /* Content is initially visible */
+}
+
+.text-danger {
+  left: 10px;
+  top: 10px;
+  color: #e74c3c;
+  font-size: 20px;
+  visibility: visible; /* Hide the icon by default */
+  width: 43px;
+}
+.welcomestyles {
+  font-family: Arial, sans-serif;
+  color: #236ab9;
+  font-weight: bold;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  background-color: #c4e0f3;
+  padding: 30px 60px;
+  color: #080808;
+  border-radius: 20px;
+  clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+  font-weight: 500;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.coursor {
+  cursor: pointer;
+}
+.fav_text {
+  display: inline-block;
+  padding: 20px 50px;
+  background-color: #28a745;
+  color: white;
+  transform: skew(-20deg);
+  font-weight: 500;
+  border-radius: 5px 0 0 5px;
+  font-size: 20px;
+}
+.chat-bubble {
+  display: inline-block;
+  background-color: #b81731;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.completed_styles {
+  background-color: #f5f7d4;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+.box_styles {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #d4e0f7;
+}

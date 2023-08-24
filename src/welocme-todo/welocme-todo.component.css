@@ -1,0 +1,71 @@
+.welcome-message {
+  text-align: center;
+  background-color: #7FBD32;
+  padding: 50px;
+  color: #d61a46;
+  border-radius: 10px;
+  margin: 70px auto;
+  width: fit-content;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message h1 {
+  color: #d61a46;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.welcome-message p {
+  color: black;
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #d61a46;
+}
+
+.primary {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.btn:hover {
+  opacity: 0.8;
+  border: 1px solid #F7D4D6;
+  background: #F7D4D6;
+  color: black;
+}
+
+.test {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee7e8;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+@keyframes appearFromMiddle {
+  0% {
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+}
+
+.appear-text {
+  display: inline-block;
+  transform: scaleX(0);
+  animation: appearFromMiddle 1s ease-in-out 0.5s forwards;
+}
